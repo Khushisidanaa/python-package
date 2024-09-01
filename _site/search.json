@@ -1,0 +1,419 @@
+[
+  {
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to simulate and split data.\n\n\n\nmake_line_data\nGenerate data for linear regression.\n\n\nmake_sine_data\nGenerate data for nonlinear regression.\n\n\nsplit_data\nSplit the data into train and test sets.\n\n\n\n\n\n\nRegression models.\n\n\n\nKNNRegressor\n\n\n\nLinearRegressor\n\n\n\n\n\n\n\nConformal prediction methods.\n\n\n\nConformalPredictor\nA class used to represent a (Split) Conformal Predictor.\n\n\n\n\n\n\nEvaluation metrics.\n\n\n\nrmse\nCompute the Root Mean Square Error (RMSE).\n\n\nmae\nCompute the Mean Absolute Error (MAE).\n\n\ncoverage\nCalculate the empirical coverage of the prediction intervals.\n\n\nsharpness\nCompute the sharpness of the prediction intervals.\n\n\n\n\n\n\nVisualization functions.\n\n\n\nplot_predictions\nPlot the predictions of a regressor on the given data.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#some-functions",
+    "href": "reference/index.html#some-functions",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to simulate and split data.\n\n\n\nmake_line_data\nGenerate data for linear regression.\n\n\nmake_sine_data\nGenerate data for nonlinear regression.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/make_line_data.html",
+    "href": "reference/make_line_data.html",
+    "title": "make_line_data",
+    "section": "",
+    "text": "data.make_line_data(n_samples=100, beta_0=0, beta_1=1, sd=1, X_low=-10, X_high=10, random_seed=None)\nGenerate data for linear regression.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nn_samples\nint\nNumber of samples to generate.\n100\n\n\nbeta_0\nfloat\nThe true intercept of the linear model.\n0\n\n\nbeta_1\nfloat\nThe true slope of the linear model.\n1\n\n\nsd\nfloat\nStandard deviation of the normally distributed errors.\n1\n\n\nX_low\nfloat\nLower bound for the uniform distribution of X.\n-10\n\n\nX_high\nfloat\nUpper bound for the uniform distribution of X.\n10\n\n\nrandom_seed\nint\nSeed to control randomness.\nNone\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\ntuple\nA tuple containing the X and y arrays. X is a 2D array with shape (n_samples, 1) and y is a 1D array with shape (n_samples,). X contains the simulated X values and y contains the corresponding true mean of the linear model with added normally distributed errors.",
+    "crumbs": [
+      "Data Utilities",
+      "make_line_data"
+    ]
+  },
+  {
+    "objectID": "reference/make_line_data.html#parameters",
+    "href": "reference/make_line_data.html#parameters",
+    "title": "make_line_data",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nn_samples\nint\nNumber of samples to generate.\n100\n\n\nbeta_0\nfloat\nThe true intercept of the linear model.\n0\n\n\nbeta_1\nfloat\nThe true slope of the linear model.\n1\n\n\nsd\nfloat\nStandard deviation of the normally distributed errors.\n1\n\n\nX_low\nfloat\nLower bound for the uniform distribution of X.\n-10\n\n\nX_high\nfloat\nUpper bound for the uniform distribution of X.\n10\n\n\nrandom_seed\nint\nSeed to control randomness.\nNone",
+    "crumbs": [
+      "Data Utilities",
+      "make_line_data"
+    ]
+  },
+  {
+    "objectID": "reference/make_line_data.html#returns",
+    "href": "reference/make_line_data.html#returns",
+    "title": "make_line_data",
+    "section": "",
+    "text": "Type\nDescription\n\n\n\n\ntuple\nA tuple containing the X and y arrays. X is a 2D array with shape (n_samples, 1) and y is a 1D array with shape (n_samples,). X contains the simulated X values and y contains the corresponding true mean of the linear model with added normally distributed errors.",
+    "crumbs": [
+      "Data Utilities",
+      "make_line_data"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MLuno",
+    "section": "",
+    "text": "Univariate Machine Learning\nWelcome!\nYou are probably looking for the API Reference !"
+  },
+  {
+    "objectID": "reference/make_sine_data.html",
+    "href": "reference/make_sine_data.html",
+    "title": "make_sine_data",
+    "section": "",
+    "text": "data.make_sine_data(n_samples=100, sd=1, X_low=-6, X_high=6, random_seed=None)\nGenerate data for nonlinear regression.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nn_samples\nint\nNumber of samples to generate.\n100\n\n\nsd\nfloat\nStandard deviation of the normally distributed errors.\n1\n\n\nX_low\nfloat\nLower bound for simulated X values.\n-6\n\n\nX_high\nfloat\nUpper bound for simulated X values.\n6\n\n\nrandom_seed\nint\nSeed to control randomness.\nNone\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\ntuple\nA tuple containing the X and y arrays. X is a 2D array with shape (n_samples, 1) and y is a 1D array with shape (n_samples,). X contains the simulated X values and y contains the corresponding sine values with added normally distributed errors.",
+    "crumbs": [
+      "Data Utilities",
+      "make_sine_data"
+    ]
+  },
+  {
+    "objectID": "reference/make_sine_data.html#parameters",
+    "href": "reference/make_sine_data.html#parameters",
+    "title": "make_sine_data",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nn_samples\nint\nNumber of samples to generate.\n100\n\n\nsd\nfloat\nStandard deviation of the normally distributed errors.\n1\n\n\nX_low\nfloat\nLower bound for simulated X values.\n-6\n\n\nX_high\nfloat\nUpper bound for simulated X values.\n6\n\n\nrandom_seed\nint\nSeed to control randomness.\nNone",
+    "crumbs": [
+      "Data Utilities",
+      "make_sine_data"
+    ]
+  },
+  {
+    "objectID": "reference/make_sine_data.html#returns",
+    "href": "reference/make_sine_data.html#returns",
+    "title": "make_sine_data",
+    "section": "",
+    "text": "Type\nDescription\n\n\n\n\ntuple\nA tuple containing the X and y arrays. X is a 2D array with shape (n_samples, 1) and y is a 1D array with shape (n_samples,). X contains the simulated X values and y contains the corresponding sine values with added normally distributed errors.",
+    "crumbs": [
+      "Data Utilities",
+      "make_sine_data"
+    ]
+  },
+  {
+    "objectID": "reference/split_data.html",
+    "href": "reference/split_data.html",
+    "title": "split_data",
+    "section": "",
+    "text": "data.split_data(X, y, holdout_size=0.2, random_seed=None)\nSplit the data into train and test sets.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe feature data to be split. A 2D array with shape (n_samples, 1).\nrequired\n\n\ny\nndarray\nThe target data to be split. A 1D array with shape (n_samples,).\nrequired\n\n\nholdout_size\nfloat\nThe proportion of the data to be used as the test set.\n0.2\n\n\nrandom_seed\nint\nSeed to control randomness.\nNone\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\ntuple\nThe split train and test data: (X_train, X_test, y_train, y_test).",
+    "crumbs": [
+      "Data Utilities",
+      "split_data"
+    ]
+  },
+  {
+    "objectID": "reference/split_data.html#parameters",
+    "href": "reference/split_data.html#parameters",
+    "title": "split_data",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe feature data to be split. A 2D array with shape (n_samples, 1).\nrequired\n\n\ny\nndarray\nThe target data to be split. A 1D array with shape (n_samples,).\nrequired\n\n\nholdout_size\nfloat\nThe proportion of the data to be used as the test set.\n0.2\n\n\nrandom_seed\nint\nSeed to control randomness.\nNone",
+    "crumbs": [
+      "Data Utilities",
+      "split_data"
+    ]
+  },
+  {
+    "objectID": "reference/split_data.html#returns",
+    "href": "reference/split_data.html#returns",
+    "title": "split_data",
+    "section": "",
+    "text": "Type\nDescription\n\n\n\n\ntuple\nThe split train and test data: (X_train, X_test, y_train, y_test).",
+    "crumbs": [
+      "Data Utilities",
+      "split_data"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#data-utilities",
+    "href": "reference/index.html#data-utilities",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to simulate and split data.\n\n\n\nmake_line_data\nGenerate data for linear regression.\n\n\nmake_sine_data\nGenerate data for nonlinear regression.\n\n\nsplit_data\nSplit the data into train and test sets.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/coverage.html",
+    "href": "reference/coverage.html",
+    "title": "coverage",
+    "section": "",
+    "text": "metrics.coverage(y_true, y_lower, y_upper)\nCalculate the empirical coverage of the prediction intervals.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ny_true\nndarray\nThe true target values.\nrequired\n\n\ny_lower\nndarray\nThe lower bounds of the prediction intervals.\nrequired\n\n\ny_upper\nndarray\nThe upper bounds of the prediction intervals.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\nfloat\nThe empirical coverage, which is the proportion of true target values that fall within the predicted intervals."
+  },
+  {
+    "objectID": "reference/coverage.html#parameters",
+    "href": "reference/coverage.html#parameters",
+    "title": "coverage",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ny_true\nndarray\nThe true target values.\nrequired\n\n\ny_lower\nndarray\nThe lower bounds of the prediction intervals.\nrequired\n\n\ny_upper\nndarray\nThe upper bounds of the prediction intervals.\nrequired"
+  },
+  {
+    "objectID": "reference/coverage.html#returns",
+    "href": "reference/coverage.html#returns",
+    "title": "coverage",
+    "section": "",
+    "text": "Type\nDescription\n\n\n\n\nfloat\nThe empirical coverage, which is the proportion of true target values that fall within the predicted intervals."
+  },
+  {
+    "objectID": "reference/rmse.html",
+    "href": "reference/rmse.html",
+    "title": "rmse",
+    "section": "",
+    "text": "metrics.rmse(y_true, y_pred)\nCompute the Root Mean Square Error (RMSE).\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ny_true\nndarray\nA 1D array of the true target values.\nrequired\n\n\ny_pred\nndarray\nA 1D array of the predicted target values.\nrequired\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\nfloat\nThe RMSE between the true and predicted target values.",
+    "crumbs": [
+      "Metrics",
+      "rmse"
+    ]
+  },
+  {
+    "objectID": "reference/rmse.html#parameters",
+    "href": "reference/rmse.html#parameters",
+    "title": "rmse",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ny_true\nndarray\nA 1D array of the true target values.\nrequired\n\n\ny_pred\nndarray\nA 1D array of the predicted target values.\nrequired",
+    "crumbs": [
+      "Metrics",
+      "rmse"
+    ]
+  },
+  {
+    "objectID": "reference/rmse.html#returns",
+    "href": "reference/rmse.html#returns",
+    "title": "rmse",
+    "section": "",
+    "text": "Type\nDescription\n\n\n\n\nfloat\nThe RMSE between the true and predicted target values.",
+    "crumbs": [
+      "Metrics",
+      "rmse"
+    ]
+  },
+  {
+    "objectID": "reference/mae.html",
+    "href": "reference/mae.html",
+    "title": "mae",
+    "section": "",
+    "text": "metrics.mae(y_true, y_pred)\nCompute the Mean Absolute Error (MAE).\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ny_true\nndarray\nA 1D array of the true target values.\nrequired\n\n\ny_pred\nndarray\nA 1D array of the predicted target values.\nrequired\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\nfloat\nThe MAE between the true and predicted target values.",
+    "crumbs": [
+      "Metrics",
+      "mae"
+    ]
+  },
+  {
+    "objectID": "reference/mae.html#parameters",
+    "href": "reference/mae.html#parameters",
+    "title": "mae",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ny_true\nndarray\nA 1D array of the true target values.\nrequired\n\n\ny_pred\nndarray\nA 1D array of the predicted target values.\nrequired",
+    "crumbs": [
+      "Metrics",
+      "mae"
+    ]
+  },
+  {
+    "objectID": "reference/mae.html#returns",
+    "href": "reference/mae.html#returns",
+    "title": "mae",
+    "section": "",
+    "text": "Type\nDescription\n\n\n\n\nfloat\nThe MAE between the true and predicted target values.",
+    "crumbs": [
+      "Metrics",
+      "mae"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#metrics",
+    "href": "reference/index.html#metrics",
+    "title": "Function reference",
+    "section": "",
+    "text": "Evaluation metrics.\n\n\n\nrmse\nCompute the Root Mean Square Error (RMSE).\n\n\nmae\nCompute the Mean Absolute Error (MAE).\n\n\ncoverage\nCalculate the empirical coverage of the prediction intervals.\n\n\nsharpness\nCompute the sharpness of the prediction intervals.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/sharpness.html",
+    "href": "reference/sharpness.html",
+    "title": "sharpness",
+    "section": "",
+    "text": "metrics.sharpness(y_pred_lower, y_pred_upper)\nCompute the sharpness of the prediction intervals.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ny_pred_lower\nndarray\nA 1D array of lower bounds of the predicted intervals.\nrequired\n\n\ny_pred_upper\nndarray\nA 1D array of upper bounds of the predicted intervals.\nrequired\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\nfloat\nThe average width of the predicted intervals.",
+    "crumbs": [
+      "Metrics",
+      "sharpness"
+    ]
+  },
+  {
+    "objectID": "reference/sharpness.html#parameters",
+    "href": "reference/sharpness.html#parameters",
+    "title": "sharpness",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ny_pred_lower\nndarray\nA 1D array of lower bounds of the predicted intervals.\nrequired\n\n\ny_pred_upper\nndarray\nA 1D array of upper bounds of the predicted intervals.\nrequired",
+    "crumbs": [
+      "Metrics",
+      "sharpness"
+    ]
+  },
+  {
+    "objectID": "reference/sharpness.html#returns",
+    "href": "reference/sharpness.html#returns",
+    "title": "sharpness",
+    "section": "",
+    "text": "Type\nDescription\n\n\n\n\nfloat\nThe average width of the predicted intervals.",
+    "crumbs": [
+      "Metrics",
+      "sharpness"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#plotting",
+    "href": "reference/index.html#plotting",
+    "title": "Function reference",
+    "section": "",
+    "text": "Visualization functions.\n\n\n\nplot_predictions\nPlot the predictions of a regressor on the given data.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/plot_predictions.html",
+    "href": "reference/plot_predictions.html",
+    "title": "plot_predictions",
+    "section": "",
+    "text": "plot.plot_predictions(X, y, regressor, conformal=False, title='')\nPlot the predictions of a regressor on the given data.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe input data, a 2D array of shape (n_samples, 1).\nrequired\n\n\ny\nndarray\nThe true target values, a 1D array of shape (n_samples,).\nrequired\n\n\nregressor\nobject\nA regressor object that has a ‘predict’ method.\nrequired\n\n\nconformal\nbool\nWhether to plot the prediction interval for a conformal predictor.\nFalse\n\n\ntitle\nstr\nThe title for the plot.\n''\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\ntuple\nA tuple containing the figure and axis objects of the plot.",
+    "crumbs": [
+      "Plotting",
+      "plot_predictions"
+    ]
+  },
+  {
+    "objectID": "reference/plot_predictions.html#parameters",
+    "href": "reference/plot_predictions.html#parameters",
+    "title": "plot_predictions",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe input data, a 2D array of shape (n_samples, 1).\nrequired\n\n\ny\nndarray\nThe true target values, a 1D array of shape (n_samples,).\nrequired\n\n\nregressor\nobject\nA regressor object that has a ‘predict’ method.\nrequired\n\n\nconformal\nbool\nWhether to plot the prediction interval for a conformal predictor.\nFalse\n\n\ntitle\nstr\nThe title for the plot.\n''",
+    "crumbs": [
+      "Plotting",
+      "plot_predictions"
+    ]
+  },
+  {
+    "objectID": "reference/plot_predictions.html#returns",
+    "href": "reference/plot_predictions.html#returns",
+    "title": "plot_predictions",
+    "section": "",
+    "text": "Type\nDescription\n\n\n\n\ntuple\nA tuple containing the figure and axis objects of the plot.",
+    "crumbs": [
+      "Plotting",
+      "plot_predictions"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#conformal-prediction",
+    "href": "reference/index.html#conformal-prediction",
+    "title": "Function reference",
+    "section": "",
+    "text": "Conformal prediction methods.\n\n\n\nConformalPredictor\nA class used to represent a (Split) Conformal Predictor.",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/ConformalPredictor.html",
+    "href": "reference/ConformalPredictor.html",
+    "title": "ConformalPredictor",
+    "section": "",
+    "text": "conformal.ConformalPredictor(self, regressor, alpha=0.05)\nA class used to represent a (Split) Conformal Predictor.\nC_alpha(x) = [y^(x) +/- q_1-alpha(x)]\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nregressor\nobject\nA regressor object that has a ‘predict’ method.\nrequired\n\n\nalpha\nfloat\nThe significance level used in the prediction interval calculation.\n0.05\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nscores\nndarray\nThe conformity scores of the calibration data.\n\n\nquantile\nfloat\nThe (1-alpha) empirical quantile of the conformity scores.\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nfit\nCalibrates the conformal predictor using the provided calibration set.\n\n\npredict\nPredicts the output for the given input X and provides a prediction interval.\n\n\n\n\n\nconformal.ConformalPredictor.fit(X, y)\nCalibrates the conformal predictor using the provided calibration set.\nSpecifically, the fit method learns\nq_1-alpha(x)\nwhere q_1-alpha(x) is the (1-alpha) empirical quantile of the conformity scores\ns = {|y_i - y^(x_i)|} U {infty}\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe input data for calibration.\nrequired\n\n\ny\nndarray\nThe output data for calibration.\nrequired\n\n\n\n\n\n\n\nconformal.ConformalPredictor.predict(X)\nPredicts the output for the given input X and provides a prediction interval.\nC_alpha(x) = [y^(x) +/- q_1-alpha(x)]\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe input data for which to predict the output.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\ntuple\nA tuple containing the prediction (1D ndarray) and the lower (1D ndarray) and upper bounds (1D ndarray) of the prediction interval.",
+    "crumbs": [
+      "Conformal Prediction",
+      "ConformalPredictor"
+    ]
+  },
+  {
+    "objectID": "reference/ConformalPredictor.html#parameters",
+    "href": "reference/ConformalPredictor.html#parameters",
+    "title": "ConformalPredictor",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nregressor\nobject\nA regressor object that has a ‘predict’ method.\nrequired\n\n\nalpha\nfloat\nThe significance level used in the prediction interval calculation.\n0.05",
+    "crumbs": [
+      "Conformal Prediction",
+      "ConformalPredictor"
+    ]
+  },
+  {
+    "objectID": "reference/ConformalPredictor.html#attributes",
+    "href": "reference/ConformalPredictor.html#attributes",
+    "title": "ConformalPredictor",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\nscores\nndarray\nThe conformity scores of the calibration data.\n\n\nquantile\nfloat\nThe (1-alpha) empirical quantile of the conformity scores.",
+    "crumbs": [
+      "Conformal Prediction",
+      "ConformalPredictor"
+    ]
+  },
+  {
+    "objectID": "reference/ConformalPredictor.html#methods",
+    "href": "reference/ConformalPredictor.html#methods",
+    "title": "ConformalPredictor",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nfit\nCalibrates the conformal predictor using the provided calibration set.\n\n\npredict\nPredicts the output for the given input X and provides a prediction interval.\n\n\n\n\n\nconformal.ConformalPredictor.fit(X, y)\nCalibrates the conformal predictor using the provided calibration set.\nSpecifically, the fit method learns\nq_1-alpha(x)\nwhere q_1-alpha(x) is the (1-alpha) empirical quantile of the conformity scores\ns = {|y_i - y^(x_i)|} U {infty}\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe input data for calibration.\nrequired\n\n\ny\nndarray\nThe output data for calibration.\nrequired\n\n\n\n\n\n\n\nconformal.ConformalPredictor.predict(X)\nPredicts the output for the given input X and provides a prediction interval.\nC_alpha(x) = [y^(x) +/- q_1-alpha(x)]\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe input data for which to predict the output.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\ntuple\nA tuple containing the prediction (1D ndarray) and the lower (1D ndarray) and upper bounds (1D ndarray) of the prediction interval.",
+    "crumbs": [
+      "Conformal Prediction",
+      "ConformalPredictor"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#regressors",
+    "href": "reference/index.html#regressors",
+    "title": "Function reference",
+    "section": "",
+    "text": "Regression models.\n\n\n\nKNNRegressor\n\n\n\nLinearRegressor",
+    "crumbs": [
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/KNNRegressor.html",
+    "href": "reference/KNNRegressor.html",
+    "title": "KNNRegressor",
+    "section": "",
+    "text": "regressors.KNNRegressor(self, k=5)\n\n\n\n\n\nName\nDescription\n\n\n\n\nfit\nFit the model using X as input data and y as target values.\n\n\npredict\nPredict the target for the provided data.\n\n\n\n\n\nregressors.KNNRegressor.fit(X, y)\nFit the model using X as input data and y as target values.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe training data, which is a 2D array of shape (n_samples, 1) where each row is a sample and each column is a feature.\nrequired\n\n\ny\nndarray\nThe target values, which is a 1D array of shape (n_samples, ).\nrequired\n\n\n\n\n\n\n\nregressors.KNNRegressor.predict(X_new)\nPredict the target for the provided data.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX_new\nndarray\nInput data, a 2D array of shape (n_samples, 1), with which to make predictions.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\nndarray\nThe target values, which is a 1D array of shape (n_samples, ).",
+    "crumbs": [
+      "Regressors",
+      "KNNRegressor"
+    ]
+  },
+  {
+    "objectID": "reference/KNNRegressor.html#methods",
+    "href": "reference/KNNRegressor.html#methods",
+    "title": "KNNRegressor",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nfit\nFit the model using X as input data and y as target values.\n\n\npredict\nPredict the target for the provided data.\n\n\n\n\n\nregressors.KNNRegressor.fit(X, y)\nFit the model using X as input data and y as target values.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe training data, which is a 2D array of shape (n_samples, 1) where each row is a sample and each column is a feature.\nrequired\n\n\ny\nndarray\nThe target values, which is a 1D array of shape (n_samples, ).\nrequired\n\n\n\n\n\n\n\nregressors.KNNRegressor.predict(X_new)\nPredict the target for the provided data.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX_new\nndarray\nInput data, a 2D array of shape (n_samples, 1), with which to make predictions.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\nndarray\nThe target values, which is a 1D array of shape (n_samples, ).",
+    "crumbs": [
+      "Regressors",
+      "KNNRegressor"
+    ]
+  },
+  {
+    "objectID": "reference/LinearRegressor.html",
+    "href": "reference/LinearRegressor.html",
+    "title": "LinearRegressor",
+    "section": "",
+    "text": "regressors.LinearRegressor(self)\n\n\n\n\n\nName\nDescription\n\n\n\n\nfit\nTrains the linear regression model using the given training data.\n\n\npredict\nMakes predictions for input data.\n\n\n\n\n\nregressors.LinearRegressor.fit(X, y)\nTrains the linear regression model using the given training data.\nIn other words, the fit method learns the weights, represented by the β vector. To learn the β vector, use:\nβ^ = (X^T X)^-1 X^T y\nHere, X is the so-called design matrix, which, to include a term for the intercept, has a column of ones appended to the input X matrix.\nX = [1 x1 1 x2 … 1 xn]\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe training data, which is a 2D array of shape (n_samples, 1) where each row is a sample and each column is a feature.\nrequired\n\n\ny\nndarray\nThe target values, which is a 1D array of shape (n_samples, ).\nrequired\n\n\n\n\n\n\n\nregressors.LinearRegressor.predict(X)\nMakes predictions for input data.\ny^ = X β^\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nInput data, a 2D array of shape (n_samples, 1), with which to make predictions.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\nndarray\nThe predicted target values as a 1D array with the same length as X.",
+    "crumbs": [
+      "Regressors",
+      "LinearRegressor"
+    ]
+  },
+  {
+    "objectID": "reference/LinearRegressor.html#methods",
+    "href": "reference/LinearRegressor.html#methods",
+    "title": "LinearRegressor",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nfit\nTrains the linear regression model using the given training data.\n\n\npredict\nMakes predictions for input data.\n\n\n\n\n\nregressors.LinearRegressor.fit(X, y)\nTrains the linear regression model using the given training data.\nIn other words, the fit method learns the weights, represented by the β vector. To learn the β vector, use:\nβ^ = (X^T X)^-1 X^T y\nHere, X is the so-called design matrix, which, to include a term for the intercept, has a column of ones appended to the input X matrix.\nX = [1 x1 1 x2 … 1 xn]\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nThe training data, which is a 2D array of shape (n_samples, 1) where each row is a sample and each column is a feature.\nrequired\n\n\ny\nndarray\nThe target values, which is a 1D array of shape (n_samples, ).\nrequired\n\n\n\n\n\n\n\nregressors.LinearRegressor.predict(X)\nMakes predictions for input data.\ny^ = X β^\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nX\nndarray\nInput data, a 2D array of shape (n_samples, 1), with which to make predictions.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\n\n\n\n\nndarray\nThe predicted target values as a 1D array with the same length as X.",
+    "crumbs": [
+      "Regressors",
+      "LinearRegressor"
+    ]
+  }
+]
